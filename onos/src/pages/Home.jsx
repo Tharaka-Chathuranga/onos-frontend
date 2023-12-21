@@ -11,7 +11,7 @@ const Home = () => {
   //we have two different states
   const [flows, setflows] = useState([]);
   const [loading, setLoading] = useState(false);
-  useEffect(() => {
+  useEffect(() => {//call backend
     setLoading(true);
     axios
       .get('http://localhost:5555/flows')
@@ -27,26 +27,26 @@ const Home = () => {
   return (
     <div className='p=4'>
       <div className='flex justify-between items-center'>
-        <h1 className='text-3xl my-8'>flows Table</h1>
+        <h1 className='text-3xl my-8'>Flow Table</h1>
         <Link to='/flows/create'>
           <MdOutlineAddBox className='text-sky-800 text-4xl' />
         </Link>
       </div>
       {loading ? (
-        <Spinner/>
+        <Spinner />
       ) : (
         <table className='w-full border-separate'>
           <thead>
             <tr>
-                <th className='border border-slate-600 rounded-md'>No</th>
-                <th className='border border-slate-600 rounded-md'>Source IP</th>
-                <th className='border border-slate-600 rounded-md max-md:hidden'>Source Port</th>
-                <th className='border border-slate-600 rounded-md max-md:hidden'>Destination Port</th>
-                <th className='border border-slate-600 rounded-md max-md:hidden'>Protocol</th>
-                <th className='border border-slate-600 rounded-md max-md:hidden'>Action</th>
-                <th className='border border-slate-600 rounded-md max-md:hidden'>Packet Count</th>
-                <th className='border border-slate-600 rounded-md max-md:hidden'>Byte Count</th>
-                <th className='border border-slate-600 rounded-md'>Operations</th>
+              <th className='border border-slate-600 rounded-md'>No</th>
+              <th className='border border-slate-600 rounded-md'>Source IP</th>
+              <th className='border border-slate-600 rounded-md max-md:hidden'>Source Port</th>
+              <th className='border border-slate-600 rounded-md max-md:hidden'>Destination Port</th>
+              <th className='border border-slate-600 rounded-md max-md:hidden'>Protocol</th>
+              <th className='border border-slate-600 rounded-md max-md:hidden'>Action</th>
+              <th className='border border-slate-600 rounded-md max-md:hidden'>Packet Count</th>
+              <th className='border border-slate-600 rounded-md max-md:hidden'>Byte Count</th>
+              <th className='border border-slate-600 rounded-md'>Operations</th>
             </tr>
           </thead>
           <tbody>
@@ -72,9 +72,6 @@ const Home = () => {
                 </td>
                 <td className='border border-state-700 rounded-md text-center max-md:hidden'>
                   {flows.byteCount}
-                </td>
-                <td className='border border-state-700 rounded-md text-center max-md:hidden'>
-                  {flows.operation}
                 </td>
                 <td className='border border-state-700 rounded-md text-center'>
                   <div className='flex justify-center gap-x-4'>
