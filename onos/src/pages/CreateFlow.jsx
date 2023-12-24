@@ -30,7 +30,7 @@ function CreateFlows() {
     };
     setLoading(true);
     axios
-      .post('http://localhost:5555/books',data)
+      .post('http://localhost:5555/flows',data)
       .then(()=>{
         setLoading(false);
         navigate('/')
