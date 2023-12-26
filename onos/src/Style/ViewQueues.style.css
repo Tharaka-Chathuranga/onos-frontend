@@ -1,0 +1,37 @@
+.queue-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .header-row {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  
+  .data-row {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .actions-cell {
+    text-align: right;
+  }
+  
+  .delete-button {
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .edit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  

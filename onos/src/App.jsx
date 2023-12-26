@@ -5,6 +5,7 @@ import ShowTable from './pages/showTable'
 import DeleteFlow from './pages/DeleteFlow'
 import CreateFlow from './pages/CreateFlow'
 import CreateQueue from './pages/CreateQueue'
+import ViewQueues from './pages/ViewQueues'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
      <Route path='/flows/details/:id' element={<ShowTable/>}/>
      <Route path='/flows/delete/:id' element={<DeleteFlow/>}/>
       <Route path='/queues/create' element={<CreateQueue/>}/>
+      <Route path='/queues/details' element={<ViewQueues/>}/>
    </Routes>
   )
 }
