@@ -1,0 +1,48 @@
+/* CreateQueue.style.css */
+
+.form-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .submit-button {
+    color: #392392;
+    padding: 10px 15px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    cursor: pointer;
+    /* Add a line below to ensure button text is visible */
+    display: inline-block;
+  }
+  
+  .submit-button:hover {
+    background-color: #45a049;
+  }
+  
