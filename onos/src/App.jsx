@@ -1,7 +1,7 @@
 import React from 'react'
 import {Routes,Route} from 'react-router-dom'
 import Home from './pages/Home'
-import ShowTable from './pages/ShowTable'
+import ShowTable from './pages/showTable'
 import DeleteFlow from './pages/DeleteFlow'
 import CreateFlow from './pages/CreateFlow'
 
