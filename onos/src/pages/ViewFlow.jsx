@@ -7,7 +7,15 @@ const FLowTable = () => {
     // Fetch queue data from your backend here
     const fetchQueues = async () => {
       try {
-        const response = await fetch('/your-backend-endpoint-to-fetch-queues');
+        const requestOptions = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Basic b25vczpyb2Nrcw=='
+          },
+          body: JSON.stringify(yourRequestBodyObject)
+        };
+        const response = await fetch('http://localhost:8181/onos/v1/flows', requestOptions);
         const data = await response.json();
         setFlows(data);
       } catch (error) {
@@ -17,11 +25,14 @@ const FLowTable = () => {
     fetchQueues();
   }, []);
 
-  const handleDelete = async (flowId) => {
+  const handleDelete = async (deviceId,flowId) => {
     // Implement delete logic here (e.g., send a DELETE request to your backend)
     try {
-      const response = await fetch(`/your-backend-endpoint-to-delete-queue/${flowId}`, {
+      const response = await fetch(`http://localhost:8181/onos/v1/flows/${deviceId}/${flowId} `, {
         method: 'DELETE',
+        headers: {
+          Authorization: 'Basic b25vczpyb2Nrcw=='
+        }
       });
 
       if (response.ok) {

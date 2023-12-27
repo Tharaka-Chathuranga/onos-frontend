@@ -191,13 +191,15 @@ function CreateFlows() {
 
     const config = {
       headers: {
-        Authorization: 'Basic b25vczpyb2Nrcw=='
+       "Authorization": 'Basic b25vczpyb2Nrcw==',
+       "Access-Control-Allow-Origin": "http://localhost:5173",
+       "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
       }
     };
 
     setLoading(true);
     axios
-      .post('http://localhost:5555/onos/v1/flows', data, config)
+      .post(`http://localhost:8181/onos/v1/flows/${formData.deviceId}`, data, config)
       .then(() => {
         setLoading(false);
         navigate('/');
@@ -232,6 +234,14 @@ function CreateFlows() {
             className='border-2 border-gray-500 px-4 py-2 w-full'
           />
         </div>
+
+        <div className='my-4'>
+        <label className='text-xl mr-4 text-gray-500'>Is Permanent:</label>
+        <select name="isPermanent" value={formData.isPermanent} onChange={handleInputChange}>
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+      </div>
         {/* Type of instruction */}
         <div className='my-4'>
           <label className='text-xl mr-4 text-gray-500'>Instruction Type</label>
@@ -278,7 +288,7 @@ function CreateFlows() {
         </div>
         {/* Save button */}
         <button className='p-2 bg-sky-300 m-8' onClick={handleSaveFlow}>
-          Save
+          ADD FLOW
         </button>
       </div>
     </div>
