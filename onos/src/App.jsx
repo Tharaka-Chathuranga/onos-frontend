@@ -8,6 +8,7 @@ import CreateQueue from './pages/CreateQueue'
 import ViewQueues from './pages/ViewQueues'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
+import ViewFlow from './pages/ViewFlow'
 
 
 function App() {
@@ -17,8 +18,7 @@ function App() {
      <Route path='/login' element={<Login/>}/>
      <Route path='/dashboard' element={<Dashboard/>}/>
      <Route path='/flows/create' element={<CreateFlow/>}/>
-     <Route path='/flows/details/:id' element={<ShowTable/>}/>
-     <Route path='/flows/delete/:id' element={<DeleteFlow/>}/>
+     <Route path='/flows/details' element={<ViewFlow/>}/>
       <Route path='/queues/create' element={<CreateQueue/>}/>
       <Route path='/queues/details' element={<ViewQueues/>}/>
    </Routes>
