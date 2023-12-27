@@ -53,7 +53,7 @@ const Form = () => {
 
   return (
     <form onSubmit={handleSubmit} className="form-container">
-        <h1 className='heading'>Create Queue</h1>
+        <h1 className='heading'><b>Create Queue</b></h1>
       <div className="form-group">
         <label htmlFor="type">Type:</label>
         <input

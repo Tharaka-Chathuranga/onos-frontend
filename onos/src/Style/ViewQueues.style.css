@@ -1,7 +1,22 @@
+/* Outer header styles */
+.header {
+  color: black;
+  margin: 5px;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 36px;
+  margin-top: 50px;
+  /* margin-bottom: px; */
+}
+
 .queue-table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    margin-top: 100px;
   }
   
   .header-row {

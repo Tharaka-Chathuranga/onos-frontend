@@ -42,6 +42,7 @@ const QueueTable = () => {
   };
 
   return (
+    <div className='header'><h1><b> View Queues</b></h1>
     <table className="queue-table">
       <thead>
         <tr className="header-row">
@@ -69,6 +70,7 @@ const QueueTable = () => {
         ))}
       </tbody>
     </table>
+    </div>
   );
 };
 

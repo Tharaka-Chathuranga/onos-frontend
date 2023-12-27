@@ -1,0 +1,45 @@
+
+/* Outer header styles */
+.outer-header {
+    color: black;
+    margin: 5px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .outer-header h1 {
+    font-size: 36px;
+    margin-top: 50px;
+    /* margin-bottom: px; */
+  }
+  
+
+/* Dashboard container styles */
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Adjust height as needed */
+  }
+  
+  /* Individual dashboard item styles */
+  .dashboard-item {
+    margin: 10px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .dashboard-item a:hover {
+    color: #555;
+  }
+  
