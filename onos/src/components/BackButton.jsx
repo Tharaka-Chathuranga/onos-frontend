@@ -1,19 +1,20 @@
-import React from 'react'
-import { BsArrowLeft } from 'react-icons/bs'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { BsArrowLeft } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
-const BackButton = ({destination = '/'}) => { // giving the default destination 
+const BackButton = ({ destination = "/" }) => {
+  // giving the default destination
   return (
-    <div className='flex'>
-        <Link
+    <div className="flex">
+      <Link
         to={destination}
-        className='bg-sky-800 text-white px-4 py-1 rounded-lg w-fit'
-        >
-            <BsArrowLeft className='text-2xl' />
-        </Link>
-
+        className="bg-sky-800 text-white px-4 py-1 rounded-lg w-fit"
+        style={{ border: "2px solid black" }}
+      >
+        <BsArrowLeft className="text-2xl" />
+      </Link>
     </div>
-  )
-}
+  );
+};
 
-export default BackButton
+export default BackButton;

@@ -1,16 +1,16 @@
 // Form component with added class names
-import React, { useState } from 'react';
-import '../Style/CreateQueue.style.css';
+import React, { useState } from "react";
+import "../Style/CreateQueue.style.css";
 
 const Form = () => {
   const [formData, setFormData] = useState({
-    type: '',
-    maximumRate: '',
-    minimumRate: '',
-    burst: '',
-    priority: '',
+    type: "",
+    maximumRate: "",
+    minimumRate: "",
+    burst: "",
+    priority: "",
   });
-  const [priorities, setPriorities] = useState(['High', 'Medium', 'Low']);
+  const [priorities, setPriorities] = useState(["High", "Medium", "Low"]);
 
   const handleChange = (event) => {
     setFormData({
@@ -25,35 +25,37 @@ const Form = () => {
 
     // Send data to backend here (replace with your actual backend logic)
     try {
-      const response = await fetch('/your-backend-endpoint', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("/your-backend-endpoint", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
         // Handle successful submission
-        console.log('Data submitted successfully!');
+        console.log("Data submitted successfully!");
         // Clear form or perform other actions as needed
         setFormData({
-          type: '',
-          maximumRate: '',
-          minimumRate: '',
-          burst: '',
-          priority: '',
+          type: "",
+          maximumRate: "",
+          minimumRate: "",
+          burst: "",
+          priority: "",
         });
       } else {
         // Handle error
-        console.error('Error submitting data:', response.statusText);
+        console.error("Error submitting data:", response.statusText);
       }
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
     }
   };
 
   return (
     <form onSubmit={handleSubmit} className="form-container">
-        <h1 className='heading'><b>Create Queue</b></h1>
+      <h1 className="heading">
+        <b>Create Queue</b>
+      </h1>
       <div className="form-group">
         <label htmlFor="type">Type:</label>
         <input
